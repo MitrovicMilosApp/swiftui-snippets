@@ -14,6 +14,10 @@
 		25431A792B7AA53B00B0EF80 /* swiftui_snippetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A782B7AA53B00B0EF80 /* swiftui_snippetsTests.swift */; };
 		25431A832B7AA53B00B0EF80 /* swiftui_snippetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A822B7AA53B00B0EF80 /* swiftui_snippetsUITests.swift */; };
 		25431A852B7AA53B00B0EF80 /* swiftui_snippetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A842B7AA53B00B0EF80 /* swiftui_snippetsUITestsLaunchTests.swift */; };
+		25431A932B7AA64F00B0EF80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A922B7AA64F00B0EF80 /* User.swift */; };
+		25431A952B7AA66100B0EF80 /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A942B7AA66100B0EF80 /* UserRegistrationViewModel.swift */; };
+		25431A992B7AA68A00B0EF80 /* UserRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A982B7AA68A00B0EF80 /* UserRegistrationView.swift */; };
+		25431A9B2B7AA6A200B0EF80 /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A9A2B7AA6A200B0EF80 /* RegistrationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		25431A7E2B7AA53B00B0EF80 /* swiftui-snippetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-snippetsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25431A822B7AA53B00B0EF80 /* swiftui_snippetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_snippetsUITests.swift; sourceTree = "<group>"; };
 		25431A842B7AA53B00B0EF80 /* swiftui_snippetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_snippetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		25431A922B7AA64F00B0EF80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		25431A942B7AA66100B0EF80 /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
+		25431A982B7AA68A00B0EF80 /* UserRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationView.swift; sourceTree = "<group>"; };
+		25431A9A2B7AA6A200B0EF80 /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */,
+				25431A912B7AA62D00B0EF80 /* MVVM */,
 				25431A692B7AA53700B0EF80 /* ContentView.swift */,
 				25431A6B2B7AA53B00B0EF80 /* Assets.xcassets */,
 				25431A6D2B7AA53B00B0EF80 /* Preview Content */,
@@ -125,6 +134,17 @@
 				25431A842B7AA53B00B0EF80 /* swiftui_snippetsUITestsLaunchTests.swift */,
 			);
 			path = "swiftui-snippetsUITests";
+			sourceTree = "<group>";
+		};
+		25431A912B7AA62D00B0EF80 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				25431A922B7AA64F00B0EF80 /* User.swift */,
+				25431A942B7AA66100B0EF80 /* UserRegistrationViewModel.swift */,
+				25431A982B7AA68A00B0EF80 /* UserRegistrationView.swift */,
+				25431A9A2B7AA6A200B0EF80 /* RegistrationService.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25431A952B7AA66100B0EF80 /* UserRegistrationViewModel.swift in Sources */,
 				25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */,
 				25431A682B7AA53700B0EF80 /* swiftui_snippetsApp.swift in Sources */,
+				25431A932B7AA64F00B0EF80 /* User.swift in Sources */,
+				25431A9B2B7AA6A200B0EF80 /* RegistrationService.swift in Sources */,
+				25431A992B7AA68A00B0EF80 /* UserRegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
