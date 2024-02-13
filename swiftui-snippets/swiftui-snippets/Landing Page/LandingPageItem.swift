@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LandingPageItem<PresentedView: View>: View {
     @State var showingModal = false
+    var nonEssential = false
     var text: String
     var presentationView: PresentedView
     var body: some View {
@@ -19,8 +20,7 @@ struct LandingPageItem<PresentedView: View>: View {
                 Text(text)
                     .foregroundStyle(.white)
                     .frame(width: geometry.size.width, height: geometry.size.width)
-                    .background(Color.blue)
-                
+                    .background(nonEssential ? Color.orange : Color.blue)
                     .cornerRadius(10)
             }
         }
