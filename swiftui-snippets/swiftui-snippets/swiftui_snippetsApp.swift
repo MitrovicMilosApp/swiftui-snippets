@@ -11,7 +11,7 @@ import SwiftUI
 struct swiftui_snippetsApp: App {
     var body: some Scene {
         WindowGroup {
-            UserRegistrationView()
+            ContentView()
         }
     }
 }

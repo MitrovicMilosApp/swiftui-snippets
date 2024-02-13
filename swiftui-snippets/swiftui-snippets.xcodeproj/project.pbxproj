@@ -26,6 +26,11 @@
 		25431AAA2B7AD7B500B0EF80 /* MovieRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431AA92B7AD7B500B0EF80 /* MovieRatingView.swift */; };
 		25431AAD2B7ADBE200B0EF80 /* EditableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431AAC2B7ADBE200B0EF80 /* EditableListView.swift */; };
 		25431AB02B7AEA5500B0EF80 /* GesturesDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431AAF2B7AEA5500B0EF80 /* GesturesDemoView.swift */; };
+		25431AB32B7B970000B0EF80 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431AB22B7B970000B0EF80 /* LoginView.swift */; };
+		25431AB52B7B978200B0EF80 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431AB42B7B978200B0EF80 /* MainTabView.swift */; };
+		25431AB72B7B979900B0EF80 /* FirstTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431AB62B7B979900B0EF80 /* FirstTabView.swift */; };
+		25431AB92B7B97A000B0EF80 /* SecondTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431AB82B7B97A000B0EF80 /* SecondTabView.swift */; };
+		25431ABD2B7B980300B0EF80 /* ModalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431ABC2B7B980300B0EF80 /* ModalViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		25431AA92B7AD7B500B0EF80 /* MovieRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRatingView.swift; sourceTree = "<group>"; };
 		25431AAC2B7ADBE200B0EF80 /* EditableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableListView.swift; sourceTree = "<group>"; };
 		25431AAF2B7AEA5500B0EF80 /* GesturesDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesDemoView.swift; sourceTree = "<group>"; };
+		25431AB22B7B970000B0EF80 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		25431AB42B7B978200B0EF80 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		25431AB62B7B979900B0EF80 /* FirstTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabView.swift; sourceTree = "<group>"; };
+		25431AB82B7B97A000B0EF80 /* SecondTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabView.swift; sourceTree = "<group>"; };
+		25431ABC2B7B980300B0EF80 /* ModalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +133,7 @@
 				25431A9C2B7ABF1900B0EF80 /* List and Detail views */,
 				25431AAB2B7ADBD000B0EF80 /* Edit Mode */,
 				25431AAE2B7AE5DA00B0EF80 /* Gestures */,
-				25431A692B7AA53700B0EF80 /* ContentView.swift */,
+				25431AB12B7B8CDB00B0EF80 /* Basic navigation tree structure */,
 				25431A6B2B7AA53B00B0EF80 /* Assets.xcassets */,
 				25431A6D2B7AA53B00B0EF80 /* Preview Content */,
 			);
@@ -209,6 +219,19 @@
 				25431AAF2B7AEA5500B0EF80 /* GesturesDemoView.swift */,
 			);
 			path = Gestures;
+			sourceTree = "<group>";
+		};
+		25431AB12B7B8CDB00B0EF80 /* Basic navigation tree structure */ = {
+			isa = PBXGroup;
+			children = (
+				25431A692B7AA53700B0EF80 /* ContentView.swift */,
+				25431AB22B7B970000B0EF80 /* LoginView.swift */,
+				25431AB42B7B978200B0EF80 /* MainTabView.swift */,
+				25431AB62B7B979900B0EF80 /* FirstTabView.swift */,
+				25431AB82B7B97A000B0EF80 /* SecondTabView.swift */,
+				25431ABC2B7B980300B0EF80 /* ModalViews.swift */,
+			);
+			path = "Basic navigation tree structure";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,16 +367,21 @@
 				25431A952B7AA66100B0EF80 /* UserRegistrationViewModel.swift in Sources */,
 				25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */,
 				25431AAD2B7ADBE200B0EF80 /* EditableListView.swift in Sources */,
+				25431AB52B7B978200B0EF80 /* MainTabView.swift in Sources */,
+				25431AB92B7B97A000B0EF80 /* SecondTabView.swift in Sources */,
+				25431AB32B7B970000B0EF80 /* LoginView.swift in Sources */,
 				25431A682B7AA53700B0EF80 /* swiftui_snippetsApp.swift in Sources */,
 				25431AA22B7AC1D500B0EF80 /* MoviesListViewModel.swift in Sources */,
 				25431A932B7AA64F00B0EF80 /* User.swift in Sources */,
 				25431AA42B7AC92800B0EF80 /* MoviesListView.swift in Sources */,
+				25431AB72B7B979900B0EF80 /* FirstTabView.swift in Sources */,
 				25431A9E2B7ABF5100B0EF80 /* MoviesService.swift in Sources */,
 				25431A9B2B7AA6A200B0EF80 /* RegistrationService.swift in Sources */,
 				25431AAA2B7AD7B500B0EF80 /* MovieRatingView.swift in Sources */,
 				25431AA02B7ABF6600B0EF80 /* Movie.swift in Sources */,
 				25431A992B7AA68A00B0EF80 /* UserRegistrationView.swift in Sources */,
 				25431AA82B7AD58400B0EF80 /* MovieDetailView.swift in Sources */,
+				25431ABD2B7B980300B0EF80 /* ModalViews.swift in Sources */,
 				25431AB02B7AEA5500B0EF80 /* GesturesDemoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
