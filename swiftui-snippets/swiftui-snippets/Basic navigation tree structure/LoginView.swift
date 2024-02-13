@@ -12,10 +12,12 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Text("Login Screen")
             Button("Log In") {
                 isLoggedIn = true
             }
+            Spacer()
         }
     }
 }

@@ -16,6 +16,7 @@ struct GesturesDemoView: View {
 
     var body: some View {
         VStack(spacing: 20) {
+            Spacer()
             // Tap Gesture
             Text("Tap me! \nTaps: \(tapCount)")
                 .padding()
@@ -69,7 +70,7 @@ struct GesturesDemoView: View {
                             gestureState = currentState
                         }
                 )
-
+            Spacer()
         }
         .padding()
         .animation(.spring(), value: dragAmount)

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253522782B7BDA1700F9DAA3 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253522772B7BDA1700F9DAA3 /* LandingPage.swift */; };
+		2535227A2B7C0BDE00F9DAA3 /* LandingPageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253522792B7C0BDE00F9DAA3 /* LandingPageItem.swift */; };
+		2535227C2B7C0C2100F9DAA3 /* DismissableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2535227B2B7C0C2100F9DAA3 /* DismissableView.swift */; };
 		25431A682B7AA53700B0EF80 /* swiftui_snippetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */; };
 		25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A692B7AA53700B0EF80 /* ContentView.swift */; };
 		25431A6C2B7AA53B00B0EF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25431A6B2B7AA53B00B0EF80 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		253522772B7BDA1700F9DAA3 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		253522792B7C0BDE00F9DAA3 /* LandingPageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageItem.swift; sourceTree = "<group>"; };
+		2535227B2B7C0C2100F9DAA3 /* DismissableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableView.swift; sourceTree = "<group>"; };
 		25431A642B7AA53700B0EF80 /* swiftui-snippets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-snippets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_snippetsApp.swift; sourceTree = "<group>"; };
 		25431A692B7AA53700B0EF80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		253522762B7BDA0400F9DAA3 /* Landing Page */ = {
+			isa = PBXGroup;
+			children = (
+				253522772B7BDA1700F9DAA3 /* LandingPage.swift */,
+				253522792B7C0BDE00F9DAA3 /* LandingPageItem.swift */,
+				2535227B2B7C0C2100F9DAA3 /* DismissableView.swift */,
+			);
+			path = "Landing Page";
+			sourceTree = "<group>";
+		};
 		25431A5B2B7AA53700B0EF80 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */,
+				253522762B7BDA0400F9DAA3 /* Landing Page */,
 				25431A912B7AA62D00B0EF80 /* MVVM */,
 				25431A9C2B7ABF1900B0EF80 /* List and Detail views */,
 				25431AAB2B7ADBD000B0EF80 /* Edit Mode */,
@@ -365,16 +382,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				25431A952B7AA66100B0EF80 /* UserRegistrationViewModel.swift in Sources */,
+				2535227C2B7C0C2100F9DAA3 /* DismissableView.swift in Sources */,
 				25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */,
 				25431AAD2B7ADBE200B0EF80 /* EditableListView.swift in Sources */,
 				25431AB52B7B978200B0EF80 /* MainTabView.swift in Sources */,
 				25431AB92B7B97A000B0EF80 /* SecondTabView.swift in Sources */,
 				25431AB32B7B970000B0EF80 /* LoginView.swift in Sources */,
+				253522782B7BDA1700F9DAA3 /* LandingPage.swift in Sources */,
 				25431A682B7AA53700B0EF80 /* swiftui_snippetsApp.swift in Sources */,
 				25431AA22B7AC1D500B0EF80 /* MoviesListViewModel.swift in Sources */,
 				25431A932B7AA64F00B0EF80 /* User.swift in Sources */,
 				25431AA42B7AC92800B0EF80 /* MoviesListView.swift in Sources */,
 				25431AB72B7B979900B0EF80 /* FirstTabView.swift in Sources */,
+				2535227A2B7C0BDE00F9DAA3 /* LandingPageItem.swift in Sources */,
 				25431A9E2B7ABF5100B0EF80 /* MoviesService.swift in Sources */,
 				25431A9B2B7AA6A200B0EF80 /* RegistrationService.swift in Sources */,
 				25431AAA2B7AD7B500B0EF80 /* MovieRatingView.swift in Sources */,
