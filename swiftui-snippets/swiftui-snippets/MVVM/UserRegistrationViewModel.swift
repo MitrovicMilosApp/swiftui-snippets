@@ -61,14 +61,20 @@ class UserRegistrationViewModel: ObservableObject {
     }
     
     func register() {
-        Task(priority: .background) {
-            let newUser = User(name: name, email: email, password: password)
-            let success = await registrationService.registerUser(user: newUser)
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                self.registrationSuccessful = success
-            }
-        }
+        let newUser = User(name: name, email: email, password: password)
+        registrationService.registerUser(user: newUser)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    break 
+                case .failure(let error):
+                    print(error)
+                }
+            }, receiveValue: { [weak self] success in
+                self?.registrationSuccessful = success
+            })
+            .store(in: &cancellables)
     }
 }
 

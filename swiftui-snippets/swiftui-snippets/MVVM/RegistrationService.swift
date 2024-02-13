@@ -6,15 +6,15 @@
 //
 
 import Foundation
+import Combine
 
 class RegistrationService {
-    func registerUser(user: User) async -> Bool {
-        // Simulate network request delay
-        do {
-            try await Task.sleep(nanoseconds:  1_000_000_000 / 2) 
-            return true
-        } catch {
-            return false
+    func registerUser(user: User) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { promise in
+            DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
+                promise(.success(true))
+            }
         }
+        .eraseToAnyPublisher()
     }
 }
