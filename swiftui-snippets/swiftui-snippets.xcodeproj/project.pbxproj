@@ -120,6 +120,7 @@
 				25431A912B7AA62D00B0EF80 /* MVVM */,
 				25431A9C2B7ABF1900B0EF80 /* List and Detail views */,
 				25431AAB2B7ADBD000B0EF80 /* Edit Mode */,
+				25431AAE2B7AE5DA00B0EF80 /* Gestures */,
 				25431A692B7AA53700B0EF80 /* ContentView.swift */,
 				25431A6B2B7AA53B00B0EF80 /* Assets.xcassets */,
 				25431A6D2B7AA53B00B0EF80 /* Preview Content */,
@@ -198,6 +199,13 @@
 				25431AAC2B7ADBE200B0EF80 /* EditableListView.swift */,
 			);
 			path = "Edit Mode";
+			sourceTree = "<group>";
+		};
+		25431AAE2B7AE5DA00B0EF80 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

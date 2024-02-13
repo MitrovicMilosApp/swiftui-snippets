@@ -9,7 +9,6 @@ import SwiftUI
 
 struct UserRegistrationView: View {
     @ObservedObject var viewModel = UserRegistrationViewModel()
-    @State private var navigateToNextScreen = false
     @State private var animateProgressView = false
     
     var body: some View {
@@ -25,13 +24,7 @@ struct UserRegistrationView: View {
                     Section {
                         Button(action: {
                             animateProgressView = true
-                            Task {
-                                let response = await viewModel.register()
-                                DispatchQueue.main.async {
-                                    animateProgressView = false
-                                    navigateToNextScreen = response
-                                }
-                            }
+                            viewModel.register()
                         }) {
                             Text("Register")
                         }
@@ -40,7 +33,7 @@ struct UserRegistrationView: View {
                     }
                 }
                 .navigationTitle("Register")
-                .navigationDestination(isPresented: $navigateToNextScreen) {
+                .navigationDestination(isPresented: $viewModel.registrationSuccessful) {
                     NextView()
                 }
                 
@@ -48,6 +41,9 @@ struct UserRegistrationView: View {
             if animateProgressView {
                 ProgressView()
             }
+        }
+        .onChange(of: viewModel.registrationSuccessful) { oldValue, newValue in
+            animateProgressView = false
         }
     }
 }

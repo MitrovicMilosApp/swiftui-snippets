@@ -15,7 +15,8 @@ class UserRegistrationViewModel: ObservableObject {
     @Published var password: String = ""
     
     // Output
-    @Published var isFormValid = false    
+    @Published var isFormValid = false  
+    @Published var registrationSuccessful = false
     
     private var registrationService = RegistrationService()
     private var cancellables = Set<AnyCancellable>()
@@ -59,9 +60,15 @@ class UserRegistrationViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
     
-    func register() async -> Bool {
-        let newUser = User(name: name, email: email, password: password)
-        return await registrationService.registerUser(user: newUser)
+    func register() {
+        Task(priority: .background) {
+            let newUser = User(name: name, email: email, password: password)
+            let success = await registrationService.registerUser(user: newUser)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.registrationSuccessful = success
+            }
+        }
     }
 }
 
