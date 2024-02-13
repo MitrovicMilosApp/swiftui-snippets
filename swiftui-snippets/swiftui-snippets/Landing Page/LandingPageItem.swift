@@ -33,7 +33,7 @@ struct LandingPageItem<PresentedView: View>: View {
                         .foregroundStyle(.white)
                         .font(.title2)
                         .frame(maxWidth: .infinity)
-                        .background(Color.gray.opacity(0.5))
+                        .background(Color.blue)
                 }
             }
         })
