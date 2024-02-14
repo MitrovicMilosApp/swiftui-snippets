@@ -24,6 +24,7 @@ struct LandingPage: View {
                     LandingPageItem(text: "Gestures", presentationView: GesturesDemoView())
                     LandingPageItem(text: "Navigation\nStructure", presentationView: ContentView())
                     LandingPageItem(nonEssential: true, text: "Rotating image", presentationView: RotatingImageView())
+                    LandingPageItem(nonEssential: true, text: "Scroll to open", presentationView: ScrollToOpen())
                 }
                 .padding()
             }
