@@ -26,10 +26,10 @@ struct LandingPageItem<PresentedView: View>: View {
         }
         
         .fullScreenCover(isPresented: $showingModal, content: {
-            DismissableView {
-                VStack {
-                    presentationView
-                    Text("\nSwipe down to dismiss\n")
+            VStack {
+                presentationView
+                DismissableView {
+                    Text("\nTap to dismiss use case\n")
                         .foregroundStyle(.white)
                         .font(.title2)
                         .frame(maxWidth: .infinity)

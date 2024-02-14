@@ -19,11 +19,8 @@ struct DismissableView<Content: View>: View {
     
     var body: some View {
         content
-            .gesture(DragGesture().onEnded { value in
-                // Check for a downward swipe
-                if value.translation.height > 50 && value.predictedEndTranslation.height > 0 {
-                    presentationMode.wrappedValue.dismiss()
-                }
-            })
+            .onTapGesture {
+                presentationMode.wrappedValue.dismiss()
+            }
     }
 }
