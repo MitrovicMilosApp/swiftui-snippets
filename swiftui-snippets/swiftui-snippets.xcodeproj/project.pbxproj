@@ -11,6 +11,7 @@
 		2535227A2B7C0BDE00F9DAA3 /* LandingPageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253522792B7C0BDE00F9DAA3 /* LandingPageItem.swift */; };
 		2535227C2B7C0C2100F9DAA3 /* DismissableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2535227B2B7C0C2100F9DAA3 /* DismissableView.swift */; };
 		2535227E2B7C0EB700F9DAA3 /* RotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2535227D2B7C0EB700F9DAA3 /* RotatingImageView.swift */; };
+		253522832B7CC32B00F9DAA3 /* ScrollToOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253522822B7CC32B00F9DAA3 /* ScrollToOpen.swift */; };
 		25431A682B7AA53700B0EF80 /* swiftui_snippetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */; };
 		25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A692B7AA53700B0EF80 /* ContentView.swift */; };
 		25431A6C2B7AA53B00B0EF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25431A6B2B7AA53B00B0EF80 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		253522792B7C0BDE00F9DAA3 /* LandingPageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageItem.swift; sourceTree = "<group>"; };
 		2535227B2B7C0C2100F9DAA3 /* DismissableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableView.swift; sourceTree = "<group>"; };
 		2535227D2B7C0EB700F9DAA3 /* RotatingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingImageView.swift; sourceTree = "<group>"; };
+		253522822B7CC32B00F9DAA3 /* ScrollToOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToOpen.swift; sourceTree = "<group>"; };
 		25431A642B7AA53700B0EF80 /* swiftui-snippets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-snippets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_snippetsApp.swift; sourceTree = "<group>"; };
 		25431A692B7AA53700B0EF80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,9 +136,18 @@
 		253522802B7C0ECE00F9DAA3 /* Nice but not essential */ = {
 			isa = PBXGroup;
 			children = (
+				253522812B7CC2F900F9DAA3 /* Scroll to open and close */,
 				2535227F2B7C0EC100F9DAA3 /* Rotating image view */,
 			);
 			path = "Nice but not essential";
+			sourceTree = "<group>";
+		};
+		253522812B7CC2F900F9DAA3 /* Scroll to open and close */ = {
+			isa = PBXGroup;
+			children = (
+				253522822B7CC32B00F9DAA3 /* ScrollToOpen.swift */,
+			);
+			path = "Scroll to open and close";
 			sourceTree = "<group>";
 		};
 		25431A5B2B7AA53700B0EF80 = {
@@ -401,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25431A952B7AA66100B0EF80 /* UserRegistrationViewModel.swift in Sources */,
+				253522832B7CC32B00F9DAA3 /* ScrollToOpen.swift in Sources */,
 				2535227C2B7C0C2100F9DAA3 /* DismissableView.swift in Sources */,
 				25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */,
 				25431AAD2B7ADBE200B0EF80 /* EditableListView.swift in Sources */,
