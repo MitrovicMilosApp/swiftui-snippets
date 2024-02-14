@@ -9,20 +9,44 @@ import SwiftUI
 import Combine
 
 struct ScrollToOpen: View {
-    @State private var topViewHeight: CGFloat = 250
-    @State private var offset: CGFloat = 0
+    struct Constants {
+        static let openHeight: CGFloat = 400
+        static let closedHeight: CGFloat = 120
+    }
+    
+    @State private var topViewHeight: CGFloat = Constants.openHeight
     @State var items = [Movie]()
     @State var isAnimating = false
+    @State var selectedMovie: Movie?
     
     var body: some View {
         VStack {
             ZStack {
-                Color.blue.frame(height: topViewHeight)
-                    .animation(.easeOut, value: topViewHeight)
-                
-                Text("Offset: \(offset)")
+                Color.white.frame(height: topViewHeight)
+                if let selectedMovie = selectedMovie {
+                    HStack(spacing: 20) {
+                        Spacer(minLength: Constants.closedHeight)
+                        VStack {
+                            Text("\(selectedMovie.title), \(selectedMovie.year)")
+                        }
+                        Spacer()
+                    }
+                    HStack {
+                        VStack {
+                            Image(selectedMovie.imageTitle)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: getTopViewWidth(fromHeight: topViewHeight), height: topViewHeight, alignment: .topLeading)
+                                .clipped()
+                        }
+                        Spacer()
+                    }
+                } else {
+                    Text("Select a movie")
+                }
             }
-            
+            .animation(.easeOut(duration: 0.5), value: topViewHeight)
+
             ScrollView {
                 GeometryReader { geometry in
                     Color.clear.preference(key: ViewOffsetKey.self, value: geometry.frame(in: .global).minY)
@@ -43,33 +67,18 @@ struct ScrollToOpen: View {
                         }
                         Spacer()
                     }
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .padding(.leading, 10)
+                    .padding(.trailing, 10)
                     .frame(height: 120)
-                    .presentationCornerRadius(10)
-                    .clipped()
+                    .onTapGesture {
+                        selectedMovie = movie
+                    }
                 }
             }
             .onPreferenceChange(ViewOffsetKey.self) { value in
-
-                offset = value
-                if topViewHeight == 100 && value > 50 {
-                    guard !isAnimating else { return }
-                    isAnimating = true
-                    withAnimation {
-                        topViewHeight = 250
-                    } completion: {
-                        isAnimating = false
-                    }
-                    
-                } else if topViewHeight == 250 && value < 10 {
-                    guard !isAnimating else { return }
-                    isAnimating = true
-                    withAnimation {
-                        topViewHeight = 100
-                    } completion: {
-                        isAnimating = false
-                    }
-                }
+                animateTopView(value: value)
             }
         }
         .background(Color.gray.opacity(0.3))
@@ -80,7 +89,41 @@ struct ScrollToOpen: View {
         Task {
             var movies = await MoviesService().getMovies()
             movies.append(contentsOf: movies)
+            movies.append(contentsOf: movies)
             self.items = movies
+        }
+    }
+    
+    func getDeviceWidth() -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    func getTopViewWidth(fromHeight height: CGFloat) -> CGFloat {
+        if height == Constants.openHeight {
+            return getDeviceWidth()
+        } else {
+            return 120
+        }
+    }
+    
+    func animateTopView(value: CGFloat) {
+        if topViewHeight == Constants.closedHeight && value > 50 {
+            guard !isAnimating else { return }
+            isAnimating = true
+            withAnimation {
+                topViewHeight = Constants.openHeight
+            } completion: {
+                isAnimating = false
+            }
+            
+        } else if topViewHeight == Constants.openHeight && value < 30 {
+            guard !isAnimating else { return }
+            isAnimating = true
+            withAnimation {
+                topViewHeight = Constants.closedHeight
+            } completion: {
+                isAnimating = false
+            }
         }
     }
 }
