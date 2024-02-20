@@ -12,6 +12,8 @@
 		2535227C2B7C0C2100F9DAA3 /* DismissableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2535227B2B7C0C2100F9DAA3 /* DismissableView.swift */; };
 		2535227E2B7C0EB700F9DAA3 /* RotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2535227D2B7C0EB700F9DAA3 /* RotatingImageView.swift */; };
 		253522832B7CC32B00F9DAA3 /* ScrollToOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253522822B7CC32B00F9DAA3 /* ScrollToOpen.swift */; };
+		253B90BA2B8537C40094273A /* BarGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B90B92B8537C40094273A /* BarGraphView.swift */; };
+		253B90BC2B8544860094273A /* GraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B90BB2B8544860094273A /* GraphData.swift */; };
 		25431A682B7AA53700B0EF80 /* swiftui_snippetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */; };
 		25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25431A692B7AA53700B0EF80 /* ContentView.swift */; };
 		25431A6C2B7AA53B00B0EF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25431A6B2B7AA53B00B0EF80 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		2535227B2B7C0C2100F9DAA3 /* DismissableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissableView.swift; sourceTree = "<group>"; };
 		2535227D2B7C0EB700F9DAA3 /* RotatingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingImageView.swift; sourceTree = "<group>"; };
 		253522822B7CC32B00F9DAA3 /* ScrollToOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToOpen.swift; sourceTree = "<group>"; };
+		253B90B92B8537C40094273A /* BarGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphView.swift; sourceTree = "<group>"; };
+		253B90BB2B8544860094273A /* GraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphData.swift; sourceTree = "<group>"; };
 		25431A642B7AA53700B0EF80 /* swiftui-snippets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-snippets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25431A672B7AA53700B0EF80 /* swiftui_snippetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_snippetsApp.swift; sourceTree = "<group>"; };
 		25431A692B7AA53700B0EF80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 			path = "Scroll to open and close";
 			sourceTree = "<group>";
 		};
+		253B90B82B8537A30094273A /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				253B90B92B8537C40094273A /* BarGraphView.swift */,
+				253B90BB2B8544860094273A /* GraphData.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
 		25431A5B2B7AA53700B0EF80 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +193,7 @@
 				25431AAB2B7ADBD000B0EF80 /* Edit Mode */,
 				25431AAE2B7AE5DA00B0EF80 /* Gestures */,
 				25431AB12B7B8CDB00B0EF80 /* Basic navigation tree structure */,
+				253B90B82B8537A30094273A /* Graph */,
 				253522802B7C0ECE00F9DAA3 /* Nice but not essential */,
 				25431A6B2B7AA53B00B0EF80 /* Assets.xcassets */,
 				25431A6D2B7AA53B00B0EF80 /* Preview Content */,
@@ -415,6 +429,7 @@
 				253522832B7CC32B00F9DAA3 /* ScrollToOpen.swift in Sources */,
 				2535227C2B7C0C2100F9DAA3 /* DismissableView.swift in Sources */,
 				25431A6A2B7AA53700B0EF80 /* ContentView.swift in Sources */,
+				253B90BC2B8544860094273A /* GraphData.swift in Sources */,
 				25431AAD2B7ADBE200B0EF80 /* EditableListView.swift in Sources */,
 				25431AB52B7B978200B0EF80 /* MainTabView.swift in Sources */,
 				25431AB92B7B97A000B0EF80 /* SecondTabView.swift in Sources */,
@@ -422,6 +437,7 @@
 				253522782B7BDA1700F9DAA3 /* LandingPage.swift in Sources */,
 				25431A682B7AA53700B0EF80 /* swiftui_snippetsApp.swift in Sources */,
 				25431AA22B7AC1D500B0EF80 /* MoviesListViewModel.swift in Sources */,
+				253B90BA2B8537C40094273A /* BarGraphView.swift in Sources */,
 				25431A932B7AA64F00B0EF80 /* User.swift in Sources */,
 				25431AA42B7AC92800B0EF80 /* MoviesListView.swift in Sources */,
 				2535227E2B7C0EB700F9DAA3 /* RotatingImageView.swift in Sources */,
