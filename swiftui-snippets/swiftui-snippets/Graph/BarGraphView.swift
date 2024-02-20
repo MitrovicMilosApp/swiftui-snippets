@@ -30,6 +30,9 @@ struct BarGraphView: View {
                                 width: .fixed(10)
                             )
                         }
+                        .chartYAxis(content: {
+                            AxisMarks(position: .leading)
+                        })
                         .frame(width: max(geometry.size.width, CGFloat(period.count) * 20), height: 300)
                         Spacer()
                     }
