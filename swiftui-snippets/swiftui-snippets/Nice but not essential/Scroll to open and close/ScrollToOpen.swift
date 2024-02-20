@@ -107,7 +107,7 @@ struct ScrollToOpen: View {
     }
     
     func animateTopView(value: CGFloat) {
-        if topViewHeight == Constants.closedHeight && value > 50 {
+        if topViewHeight == Constants.closedHeight && value >  Constants.closedHeight {
             guard !isAnimating else { return }
             isAnimating = true
             withAnimation {
@@ -116,7 +116,7 @@ struct ScrollToOpen: View {
                 isAnimating = false
             }
             
-        } else if topViewHeight == Constants.openHeight && value < 30 {
+        } else if topViewHeight == Constants.openHeight && value < Constants.openHeight {
             guard !isAnimating else { return }
             isAnimating = true
             withAnimation {
