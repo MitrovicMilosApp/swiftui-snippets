@@ -24,6 +24,7 @@ struct LandingPage: View {
                     LandingPageItem(text: "Gestures", presentationView: GesturesDemoView())
                     LandingPageItem(text: "Navigation\nStructure", presentationView: ContentView())
                     LandingPageItem(text: "Bar Graph", presentationView: BarGraphView())
+                    LandingPageItem(text: "Todo View", presentationView: TodoView(viewModel: TodoViewModel(repository: InMemoryRepository())))
                     LandingPageItem(nonEssential: true, text: "Rotating image", presentationView: RotatingImageView())
                     LandingPageItem(nonEssential: true, text: "Scroll to open", presentationView: ScrollToOpen())
                 }
