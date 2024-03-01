@@ -17,7 +17,6 @@ struct GesturesDemoView: View {
     var body: some View {
         VStack(spacing: 20) {
             Spacer()
-            // Tap Gesture
             Text("Tap me! \nTaps: \(tapCount)")
                 .padding()
                 .background(Color.green)
@@ -26,7 +25,6 @@ struct GesturesDemoView: View {
                     tapCount += 1
                 }
             
-            // Long Press Gesture
             Text("Long Press me! \nLong Presses: \(longPressCount)")
                 .padding()
                 .background(Color.blue)
@@ -46,7 +44,6 @@ struct GesturesDemoView: View {
                         }
                 )
             
-            // Drag Gesture
             Text("Drag me!")
                 .padding()
                 .background(Color.orange)
@@ -58,7 +55,6 @@ struct GesturesDemoView: View {
                     }
                 )
             
-            // Pinch to Zoom Gesture
             Text("Pinch me!")
                 .padding()
                 .background(Color.purple)
