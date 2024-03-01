@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// A wrapper view that adds a swipe down gesture to dismiss the presented view
+// A wrapper view that adds a tap gesture to dismiss the presented view
 struct DismissableView<Content: View>: View {
     // Use the environment's presentation mode for dismissal
     @Environment(\.presentationMode) var presentationMode
