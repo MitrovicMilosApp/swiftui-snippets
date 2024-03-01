@@ -11,8 +11,9 @@ import Combine
 class TodoViewModel: ObservableObject {
     @Published var todos: [Todo] = []
     @Published var repositoryName: String
+
     private var cancellables = Set<AnyCancellable>()
-    private let repository: TodoRepository
+    private var repository: TodoRepository
     
     init(repository: TodoRepository) {
         self.repository = repository
@@ -48,6 +49,12 @@ class TodoViewModel: ObservableObject {
                 self?.bindTodos()
             })
             .store(in: &cancellables)
+    }
+    
+    func switchRepositoryTo(_ type: TodoRepositoryType) {
+        self.repository = TodoRepositoryFactory.shared.getRepository(type)
+        self.repositoryName = repository.name
+        bindTodos()
     }
 }
 

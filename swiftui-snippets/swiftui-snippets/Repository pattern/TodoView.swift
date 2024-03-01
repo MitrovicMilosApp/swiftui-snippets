@@ -10,25 +10,46 @@ import SwiftUI
 struct TodoView: View {
     @ObservedObject var viewModel: TodoViewModel
     @State private var newTodoText: String = ""
+    @State var selectedRepositoryType: Bool = false
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.todos) { todo in
-                    TodoRow(todo: todo, toggleDone: {
-                        viewModel.toggleDone(for: todo)
-                    })
-                }
-                .onDelete(perform: deleteTodo)
-                
-                HStack {
-                    TextField("New Todo", text: $newTodoText)
-                    Button(action: addTodo) {
-                        Text("Add")
+        if selectedRepositoryType {
+            NavigationView {
+                List {
+                    ForEach(viewModel.todos) { todo in
+                        TodoRow(todo: todo, toggleDone: {
+                            viewModel.toggleDone(for: todo)
+                        })
+                    }
+                    .onDelete(perform: deleteTodo)
+                    
+                    HStack {
+                        TextField("New Todo", text: $newTodoText)
+                        Button(action: addTodo) {
+                            Text("Add")
+                        }
                     }
                 }
+                .navigationTitle("Todos from \(viewModel.repositoryName)")
             }
-            .navigationTitle("Todos from \(viewModel.repositoryName)")
+        } else {
+            Spacer()
+            VStack(spacing: 20) {
+                Text("Please select repository type:")
+                Button("In Memory") {
+                    viewModel.switchRepositoryTo(.inMemory)
+                    selectedRepositoryType = true
+                }
+                Button("Core Data") {
+                    viewModel.switchRepositoryTo(.coreData)
+                    selectedRepositoryType = true
+                }
+                Button("User Defaults") {
+                    viewModel.switchRepositoryTo(.userDefaults)
+                    selectedRepositoryType = true
+                }
+            }
+            Spacer()
         }
     }
     

@@ -16,4 +16,29 @@ protocol TodoRepository {
     func removeTodo(id: UUID) -> AnyPublisher<Void, Never>
 }
 
+enum TodoRepositoryType {
+    case inMemory
+    case coreData
+    case userDefaults
+}
 
+class TodoRepositoryFactory {
+    private let inMemoryRepository = InMemoryRepository()
+    private let coreDataRepository = CoreDataRepository()
+    private let userDefaultsRepository = UserDefaultsRepository()
+    
+    static let shared = TodoRepositoryFactory()
+    
+    private init() {}
+    
+    func getRepository(_ type: TodoRepositoryType) -> TodoRepository {
+        return switch type {
+        case .inMemory:
+            inMemoryRepository
+        case .coreData:
+            coreDataRepository
+        case .userDefaults:
+            userDefaultsRepository
+        }
+    }
+}
