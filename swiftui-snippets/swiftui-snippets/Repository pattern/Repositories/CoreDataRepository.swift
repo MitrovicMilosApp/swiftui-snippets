@@ -21,7 +21,7 @@ class CoreDataRepository: TodoRepository {
         let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
         do {
             let todoEntities = try context.fetch(request)
-            let todos = todoEntities.map { Todo(id: $0.id ?? UUID(), text: $0.text ?? "", done: $0.done) }
+            let todos = todoEntities.map { Todo(id: $0.id ?? UUID(), text: $0.text ?? "", done: $0.done, date: $0.date ?? Date()) }
             return Just(todos).eraseToAnyPublisher()
         } catch {
             return Just([]).eraseToAnyPublisher()
@@ -33,6 +33,7 @@ class CoreDataRepository: TodoRepository {
         entity.id = todo.id
         entity.text = todo.text
         entity.done = todo.done
+        entity.date = todo.date
         saveContext()
         return Just(()).eraseToAnyPublisher()
     }
