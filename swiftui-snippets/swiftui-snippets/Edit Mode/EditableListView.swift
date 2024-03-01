@@ -10,7 +10,7 @@ import SwiftUI
 struct EditableListView: View {
     @State private var items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
     @State var editMode: EditMode = .inactive
-    //      the line below is a trap - it is not working properly if we use the edit mode value in more than one place
+    //    IMPORTANT: the line below is a trap - it is not working properly if we use the edit mode value in more than one place
     //    @Environment(\.editMode) private var editMode
     
     var body: some View {
