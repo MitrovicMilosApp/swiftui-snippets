@@ -9,27 +9,19 @@ import SwiftUI
 
 struct LandingPage: View {
     var body: some View {
-        GeometryReader { geometry in
-            
-            ScrollView {
-                let columns = [
-                    GridItem(.flexible(), alignment: .center),
-                    GridItem(.flexible(), alignment: .trailing)
-                ]
-                LazyVGrid(columns: columns, spacing: geometry.size.width * 0.45) {
-                    
-                    LandingPageItem(text: "MVVM", presentationView: UserRegistrationView())
-                    LandingPageItem(text: "List &\nDetail", presentationView: MoviesListView())
-                    LandingPageItem(text: "Edit Mode", presentationView: EditableListView())
-                    LandingPageItem(text: "Gestures", presentationView: GesturesDemoView())
-                    LandingPageItem(text: "Navigation\nStructure", presentationView: ContentView())
-                    LandingPageItem(text: "Bar Graph", presentationView: BarGraphView())
-                    LandingPageItem(text: "Todo View", presentationView: TodoView(viewModel: TodoViewModel(repository: TodoRepositoryFactory.shared.getRepository(.inMemory))))
-                    LandingPageItem(nonEssential: true, text: "Rotating image", presentationView: RotatingImageView())
-                    LandingPageItem(nonEssential: true, text: "Scroll to open", presentationView: ScrollToOpen())
-                }
-                .padding()
+        NavigationStack {
+            List {
+                LandingPageItem(text: "MVVM", presentationView: UserRegistrationView())
+                LandingPageItem(text: "List & Detail", presentationView: MoviesListView())
+                LandingPageItem(text: "Edit Mode", presentationView: EditableListView())
+                LandingPageItem(text: "Gestures", presentationView: GesturesDemoView())
+                LandingPageItem(text: "Navigation Structure", presentationView: ContentView())
+                LandingPageItem(text: "Bar Graph", presentationView: BarGraphView())
+                LandingPageItem(text: "Todo View", presentationView: TodoView(viewModel: TodoViewModel(repository: TodoRepositoryFactory.shared.getRepository(.inMemory))))
+                LandingPageItem(text: "Rotating image", presentationView: RotatingImageView())
+                LandingPageItem(text: "Scroll to open", presentationView: ScrollToOpen())
             }
+            .navigationTitle("Use Cases")
         }
     }
 }

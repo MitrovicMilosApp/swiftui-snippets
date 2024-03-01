@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LandingPageItem<PresentedView: View>: View {
     @State var showingModal = false
-    var nonEssential = false
     var text: String
     var presentationView: PresentedView
     var body: some View {
@@ -17,11 +16,10 @@ struct LandingPageItem<PresentedView: View>: View {
             Button(action: {
                 showingModal = true
             }) {
+                Spacer(minLength: 5)
                 Text(text)
-                    .foregroundStyle(.white)
-                    .frame(width: geometry.size.width, height: geometry.size.width)
-                    .background(nonEssential ? Color.orange : Color.blue)
-                    .cornerRadius(10)
+                    .foregroundStyle(.black)
+                Spacer(minLength: 5)
             }
         }
         
